@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TunisiaTour — La Tunisie Intelligente</title>
+    <title>TunisiaTour — Smart Tunisia</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -25,15 +25,8 @@
         --white: #f7f4ee;
       }
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-        font-size: 16px;
-      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; font-size: 16px; }
       body {
         font-family: 'DM Sans', sans-serif;
         background: var(--ink);
@@ -41,9 +34,7 @@
         overflow-x: hidden;
         cursor: none;
       }
-      @media (max-width: 768px) {
-        body { cursor: auto; }
-      }
+      @media (max-width: 768px) { body { cursor: auto; } }
       ::-webkit-scrollbar { width: 3px; }
       ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
 
@@ -60,9 +51,7 @@
         transition: all 0.14s ease;
       }
       .cursor-grow #ring { width: 70px; height: 70px; border-color: rgba(200, 144, 58, 0.2); }
-      @media (max-width: 768px) {
-        #dot, #ring { display: none; }
-      }
+      @media (max-width: 768px) { #dot, #ring { display: none; } }
 
       /* ━━━ ZELLIGE BG PATTERN ━━━ */
       .zellige {
@@ -125,10 +114,7 @@
         display: none; flex-direction: column; gap: 5px;
         background: none; border: none; cursor: pointer; padding: 4px;
       }
-      .nav-hamburger span {
-        display: block; width: 24px; height: 2px;
-        background: var(--cream); transition: all 0.3s;
-      }
+      .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); transition: all 0.3s; }
       .nav-mobile-menu {
         display: none; position: fixed; top: 72px; left: 0; right: 0;
         background: rgba(8, 11, 15, 0.97); backdrop-filter: blur(24px);
@@ -139,8 +125,7 @@
       .nav-mobile-menu a {
         font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
         color: var(--smoke); text-decoration: none; font-weight: 500;
-        padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
-        transition: color 0.3s;
+        padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color 0.3s;
       }
       .nav-mobile-menu a:last-child { border-bottom: none; }
       .nav-mobile-menu a:hover { color: var(--gold); }
@@ -149,8 +134,7 @@
         background: linear-gradient(135deg, var(--gold), var(--copper));
         border: none; color: var(--ink); padding: 13px;
         font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700;
-        letter-spacing: 2px; text-transform: uppercase; cursor: pointer;
-        text-align: center;
+        letter-spacing: 2px; text-transform: uppercase; cursor: pointer; text-align: center;
       }
 
       @media (max-width: 900px) {
@@ -174,21 +158,16 @@
         background: linear-gradient(110deg, rgba(8, 11, 15, 0.98) 0%, rgba(8, 11, 15, 0.88) 45%, rgba(8, 11, 15, 0.35) 80%, rgba(8, 11, 15, 0.15) 100%);
       }
       .grain {
-        position: absolute; inset: 0; pointer-events: none; z-index: 1;
-        opacity: 0.06;
+        position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: 0.06;
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
         animation: grainShift 0.5s steps(2) infinite;
       }
       @keyframes grainShift {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(-2px, 2px); }
-        50% { transform: translate(2px, -2px); }
-        75% { transform: translate(-2px, -2px); }
+        0% { transform: translate(0, 0); } 25% { transform: translate(-2px, 2px); }
+        50% { transform: translate(2px, -2px); } 75% { transform: translate(-2px, -2px); }
         100% { transform: translate(2px, 2px); }
       }
-      .hero-inner {
-        position: relative; z-index: 2; padding: 0 64px; max-width: 760px;
-      }
+      .hero-inner { position: relative; z-index: 2; padding: 0 64px; max-width: 760px; }
       .h-label {
         display: inline-flex; align-items: center; gap: 12px;
         margin-bottom: 32px; opacity: 0; animation: riseUp 0.7s 0.2s forwards;
@@ -496,7 +475,7 @@
       .rcard-name { font-size: 13px; font-weight: 600; color: var(--white); }
       .rcard-from { font-size: 10px; color: var(--smoke); }
 
-      /* ━━━ PRESTATAIRES ━━━ */
+      /* ━━━ PARTNERS ━━━ */
       #presta { background: var(--ink2); }
       .presta-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
       .presta-list { display: flex; flex-direction: column; gap: 10px; }
@@ -577,166 +556,110 @@
       .m-btn-s:hover { border-color: var(--gold); color: var(--gold); }
       .m-note { font-size: 9px; color: rgba(255, 255, 255, 0.2); text-align: center; margin-top: 16px; letter-spacing: 0.5px; }
 
-      /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         RESPONSIVE — TABLET (≤ 1024px)
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+      /* ━━━ RESPONSIVE — TABLET (≤ 1024px) ━━━ */
       @media (max-width: 1024px) {
         section { padding: 80px 40px; }
         nav { padding: 0 40px; }
         .nav-links { gap: 24px; }
         .nav-links a { font-size: 10px; }
-
         .hero-inner { padding: 0 40px; }
         .hbottom { padding: 0 40px 36px; }
         .hstats { gap: 28px; }
-
-        .dgrid {
-          grid-template-columns: repeat(6, 1fr);
-          grid-template-rows: 200px 200px 200px;
-        }
+        .dgrid { grid-template-columns: repeat(6, 1fr); grid-template-rows: 200px 200px 200px; }
         .dc1 { grid-column: span 6; grid-row: span 1; }
         .dc2 { grid-column: span 3; }
         .dc3 { grid-column: span 3; }
         .dc4 { grid-column: span 3; }
         .dc5 { grid-column: span 3; }
-
         .ai-grid { gap: 60px; }
         .ar-grid { gap: 60px; }
         .presta-layout { gap: 60px; }
-
         .art-grid { grid-template-columns: repeat(2, 1fr); }
         .rev-grid { grid-template-columns: repeat(2, 1fr); }
         .foot-main { grid-template-columns: 1fr 1fr; gap: 40px; }
-
         #cta { padding: 80px 40px; }
         footer { padding: 52px 40px 28px; }
       }
 
-      /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         RESPONSIVE — MOBILE (≤ 768px)
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+      /* ━━━ RESPONSIVE — MOBILE (≤ 768px) ━━━ */
       @media (max-width: 768px) {
         section { padding: 64px 20px; }
         nav { padding: 0 20px; height: 64px; }
-
-        /* Hero */
         #hero { min-height: 100svh; align-items: flex-end; padding-bottom: 20px; }
-        .hero-photo::after {
-          background: linear-gradient(180deg, rgba(8,11,15,0.7) 0%, rgba(8,11,15,0.95) 60%, rgba(8,11,15,1) 100%);
-        }
+        .hero-photo::after { background: linear-gradient(180deg, rgba(8,11,15,0.7) 0%, rgba(8,11,15,0.95) 60%, rgba(8,11,15,1) 100%); }
         .hero-inner { padding: 80px 20px 0; max-width: 100%; }
         h1 { font-size: clamp(44px, 14vw, 72px); letter-spacing: -2px; }
         .h-desc { font-size: 14px; max-width: 100%; }
         .h-label { margin-bottom: 20px; }
         .h-label-txt { font-size: 9px; letter-spacing: 2.5px; }
-
-        /* Hero search bar — stack vertically */
-        .hsearch {
-          flex-direction: column; margin-top: 24px;
-          clip-path: none; border-radius: 0;
-        }
+        .hsearch { flex-direction: column; margin-top: 24px; clip-path: none; border-radius: 0; }
         .hfield { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 12px 16px; }
         .hfield:last-of-type { border-bottom: none; }
         .hfield select, .hfield input { font-size: 14px; }
         .hgo { width: 100%; height: 52px; font-size: 20px; }
-
-        /* Hero bottom */
         .hbottom { padding: 0 20px 20px; flex-direction: column; align-items: flex-start; gap: 20px; }
         .hscroll { display: none; }
         .hstats { gap: 20px; }
         .hstat .n { font-size: 32px; }
         .hstat .l { font-size: 8px; }
         .hstat-div { height: 36px; }
-
-        /* Destinations grid — single column on mobile */
         .d-head { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
-        .dgrid {
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: auto;
-          gap: 8px;
-        }
+        .dgrid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 8px; }
         .dc1 { grid-column: span 2; height: 220px; }
         .dc2 { grid-column: span 1; height: 160px; }
         .dc3 { grid-column: span 1; height: 160px; }
         .dc4 { grid-column: span 1; height: 160px; }
         .dc5 { grid-column: span 1; height: 160px; }
         .dc .dcity { font-size: 16px; }
-
-        /* AI section */
         .ai-grid { grid-template-columns: 1fr; gap: 48px; }
         .phone-scene { max-width: 220px; }
         .p-float.f1 { right: -10px; top: -14px; font-size: 9px; padding: 6px 10px; }
         .p-float.f2 { left: -10px; font-size: 9px; padding: 6px 10px; }
-
-        /* AR section */
         .ar-grid { grid-template-columns: 1fr; gap: 40px; }
         .ar-launch { width: 100%; justify-content: center; }
-
-        /* Artisans */
         .art-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
         .acard-name { font-size: 15px; }
-
-        /* How it works */
         .how-grid { grid-template-columns: 1fr; }
         .hstep { padding: 36px 24px; }
         .hstep-bg-n { font-size: 70px; }
         .hstep-title { font-size: 20px; }
         .how-header { margin-bottom: 48px; }
-
-        /* Reviews */
         .rev-header { flex-direction: column; align-items: flex-start; gap: 24px; margin-bottom: 32px; }
         .rev-grid { grid-template-columns: 1fr; }
         .rev-score-block .score-n { font-size: 52px; }
-
-        /* Prestataires */
         .presta-layout { grid-template-columns: 1fr; gap: 40px; }
         .pcard { padding: 16px 18px; }
         .pcard-count { font-size: 28px; }
-
-        /* CTA */
         #cta { padding: 64px 20px; }
         .cta-big { letter-spacing: -1px; }
         .cta-sub { font-size: 14px; margin-bottom: 32px; }
         .cta-form { clip-path: none; flex-direction: column; }
         .cta-form input { padding: 14px 18px; }
         .cta-form button { padding: 14px; width: 100%; }
-
-        /* Footer */
         footer { padding: 48px 20px 24px; }
         .foot-main { grid-template-columns: 1fr; gap: 32px; }
         .foot-bottom { flex-direction: column; gap: 16px; text-align: center; }
-
-        /* Sections shared */
         .sec-h { letter-spacing: -1px; }
         .sec-p { font-size: 14px; }
-
-        /* Modal */
         .mbox { padding: 28px 20px; }
         .m-title { font-size: 24px; }
       }
 
-      /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-         RESPONSIVE — SMALL MOBILE (≤ 480px)
-      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+      /* ━━━ RESPONSIVE — SMALL MOBILE (≤ 480px) ━━━ */
       @media (max-width: 480px) {
         .art-grid { grid-template-columns: 1fr; }
         .acard-img { height: 200px; }
-
         .dgrid { grid-template-columns: 1fr; }
         .dc1, .dc2, .dc3, .dc4, .dc5 { grid-column: span 1; height: 180px; }
-
         .hstats { gap: 14px; }
         .hstat .n { font-size: 28px; }
         .hstat-div { display: none; }
-
         .m-btns { grid-template-columns: 1fr; }
-
         .logo { font-size: 18px; }
       }
     </style>
   </head>
   <body>
-    <!-- Custom cursor -->
     <div id="dot"></div>
     <div id="ring"></div>
 
@@ -745,13 +668,13 @@
       <div class="logo">Tunisia<b>Tour</b><sub>™</sub></div>
       <div class="nav-links">
         <a href="#destinations">Destinations</a>
-        <a href="#ai-sec">Intelligence IA</a>
-        <a href="#ar-sec">Réalité Augmentée</a>
-        <a href="#artisans">Artisanat</a>
-        <a href="#presta">Partenaires</a>
+        <a href="#ai-sec">AI Intelligence</a>
+        <a href="#ar-sec">Augmented Reality</a>
+        <a href="#artisans">Crafts</a>
+        <a href="#presta">Partners</a>
       </div>
       <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })">
-        Commencer →
+        Get Started →
       </button>
       <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -761,12 +684,12 @@
     <!-- Mobile menu -->
     <div class="nav-mobile-menu" id="mobileMenu">
       <a href="#destinations" onclick="closeMenu()">Destinations</a>
-      <a href="#ai-sec" onclick="closeMenu()">Intelligence IA</a>
-      <a href="#ar-sec" onclick="closeMenu()">Réalité Augmentée</a>
-      <a href="#artisans" onclick="closeMenu()">Artisanat</a>
-      <a href="#presta" onclick="closeMenu()">Partenaires</a>
+      <a href="#ai-sec" onclick="closeMenu()">AI Intelligence</a>
+      <a href="#ar-sec" onclick="closeMenu()">Augmented Reality</a>
+      <a href="#artisans" onclick="closeMenu()">Crafts</a>
+      <a href="#presta" onclick="closeMenu()">Partners</a>
       <button class="nav-mobile-cta" onclick="closeMenu(); document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })">
-        Commencer →
+        Get Started →
       </button>
     </div>
 
@@ -777,10 +700,10 @@
       <div class="hero-inner">
         <div class="h-label">
           <div class="h-label-bar"></div>
-          <span class="h-label-txt">Tourisme Intelligent · IA · Réalité Augmentée</span>
+          <span class="h-label-txt">Smart Tourism · AI · Augmented Reality</span>
         </div>
-        <h1>Vis la<br />Tunisie<br /><em>pour vrai.</em></h1>
-        <p class="h-desc">La première plateforme numérique touristique tunisienne tout-en-un — personnalisée par l'IA, enrichie par la RA.</p>
+        <h1>Experience<br />Tunisia<br /><em>for real.</em></h1>
+        <p class="h-desc">Tunisia's first all-in-one digital tourism platform — personalised by AI, enriched by AR.</p>
         <div class="hsearch">
           <div class="hfield">
             <label>Destination</label>
@@ -790,21 +713,21 @@
               <option>Carthage</option>
               <option>Tozeur · Sahara</option>
               <option>Hammamet</option>
-              <option>Médina de Tunis</option>
+              <option>Tunis Medina</option>
             </select>
           </div>
           <div class="hfield">
-            <label>Envie</label>
+            <label>Mood</label>
             <select>
-              <option>Culture & Histoire</option>
-              <option>Plage & Détente</option>
-              <option>Désert & Aventure</option>
-              <option>Artisanat Authentique</option>
+              <option>Culture & History</option>
+              <option>Beach & Relaxation</option>
+              <option>Desert & Adventure</option>
+              <option>Authentic Crafts</option>
             </select>
           </div>
           <div class="hfield">
             <label>Dates</label>
-            <input type="text" placeholder="Quand ?" />
+            <input type="text" placeholder="When?" />
           </div>
           <button class="hgo" onclick="document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' })">→</button>
         </div>
@@ -812,17 +735,17 @@
       <div class="hbottom">
         <div class="hscroll">
           <div class="hscroll-line"></div>
-          <span class="hscroll-txt">Explorer</span>
+          <span class="hscroll-txt">Explore</span>
         </div>
         <div class="hstats">
           <div class="hstat">
             <div class="n">9M<s>+</s></div>
-            <div class="l">Touristes / an</div>
+            <div class="l">Tourists / year</div>
           </div>
           <div class="hstat-div"></div>
           <div class="hstat">
             <div class="n">500<s>+</s></div>
-            <div class="l">Artisans locaux</div>
+            <div class="l">Local Artisans</div>
           </div>
           <div class="hstat-div"></div>
           <div class="hstat">
@@ -840,30 +763,30 @@
         <div>
           <div class="stag">
             <div class="stag-line"></div>
-            <span class="stag-txt">Explorer</span>
+            <span class="stag-txt">Explore</span>
           </div>
-          <h2 class="sec-h">Destinations<br /><em>de rêve.</em></h2>
+          <h2 class="sec-h">Dream<br /><em>destinations.</em></h2>
         </div>
-        <div class="d-all">Toutes les destinations →</div>
+        <div class="d-all">All destinations →</div>
       </div>
       <div class="dgrid sr">
         <div class="dc dc1" onclick="openModal()">
           <img src="https://tunisie.co/uploads/images/content/sidi-bousaid-010424.jpg" alt="Sidi Bou Said" />
           <div class="veil"></div>
-          <div class="ar-pill">🥽 AR Dispo</div>
+          <div class="ar-pill">🥽 AR Available</div>
           <div class="dinfo">
             <div class="dcity">Sidi Bou Saïd</div>
-            <div class="dreg">Côte Nord · Tunis</div>
+            <div class="dreg">North Coast · Tunis</div>
             <div class="dstars">★★★★★ &nbsp;4.9</div>
           </div>
         </div>
         <div class="dc dc2" onclick="openModal()">
           <img src="https://www.revigorate.com/images/galerie-fatma-djerba.jpg" alt="Djerba" />
           <div class="veil"></div>
-          <div class="ar-pill">🥽 AR Dispo</div>
+          <div class="ar-pill">🥽 AR Available</div>
           <div class="dinfo">
             <div class="dcity">Djerba</div>
-            <div class="dreg">Île du Sud</div>
+            <div class="dreg">Southern Island</div>
             <div class="dstars">★★★★★ &nbsp;4.8</div>
           </div>
         </div>
@@ -879,10 +802,10 @@
         <div class="dc dc4" onclick="openModal()">
           <img src="https://img.rts.ch/articles/2021/image/abwmv3-25932145.image?w=640&h=640" alt="Carthage" />
           <div class="veil"></div>
-          <div class="ar-pill">🥽 AR Dispo</div>
+          <div class="ar-pill">🥽 AR Available</div>
           <div class="dinfo">
             <div class="dcity">Carthage</div>
-            <div class="dreg">Histoire · Tunis</div>
+            <div class="dreg">History · Tunis</div>
             <div class="dstars">★★★★★ &nbsp;4.9</div>
           </div>
         </div>
@@ -890,7 +813,7 @@
           <img src="https://lepetitjournal.com/_next/image?url=https%3A%2F%2Fbackoffice.lepetitjournal.com%2Fsites%2Fdefault%2Ffiles%2Finline-images%2FMEDINA.png&w=3840&q=75" alt="Médina" />
           <div class="veil"></div>
           <div class="dinfo">
-            <div class="dcity">Médina de Tunis</div>
+            <div class="dcity">Tunis Medina</div>
             <div class="dreg">Culture · Centre</div>
             <div class="dstars">★★★★☆ &nbsp;4.6</div>
           </div>
@@ -905,30 +828,30 @@
         <div class="sr-l">
           <div class="stag">
             <div class="stag-line"></div>
-            <span class="stag-txt">Intelligence Artificielle</span>
+            <span class="stag-txt">Artificial Intelligence</span>
           </div>
-          <h2 class="sec-h">L'IA qui<br />vous <em>comprend.</em></h2>
-          <p class="sec-p">Notre moteur d'IA analyse vos préférences et crée une expérience 100% personnalisée à chaque visite.</p>
+          <h2 class="sec-h">The AI that<br /><em>gets you.</em></h2>
+          <p class="sec-p">Our AI engine analyses your preferences and crafts a 100% personalised experience with every visit.</p>
           <div class="ai-cards">
             <div class="aicard">
               <div class="aicard-ico">🎯</div>
               <div>
-                <div class="aicard-title">Recommandations Hyper-Personnalisées</div>
-                <div class="aicard-desc">Itinéraires sur-mesure selon votre profil, budget et centres d'intérêt</div>
+                <div class="aicard-title">Hyper-Personalised Recommendations</div>
+                <div class="aicard-desc">Tailored itineraries based on your profile, budget and interests</div>
               </div>
             </div>
             <div class="aicard">
               <div class="aicard-ico">🗣️</div>
               <div>
-                <div class="aicard-title">Assistant IA 24h/24</div>
-                <div class="aicard-desc">Réponses instantanées en arabe, français et anglais, à tout moment</div>
+                <div class="aicard-title">24/7 AI Assistant</div>
+                <div class="aicard-desc">Instant answers in Arabic, English and French, any time of day</div>
               </div>
             </div>
             <div class="aicard">
               <div class="aicard-ico">📊</div>
               <div>
-                <div class="aicard-title">Analyse Prédictive</div>
-                <div class="aicard-desc">Meilleures périodes, prix optimaux, conseils anti-foule en temps réel</div>
+                <div class="aicard-title">Predictive Analysis</div>
+                <div class="aicard-desc">Best travel windows, optimal prices, real-time crowd avoidance tips</div>
               </div>
             </div>
           </div>
@@ -941,48 +864,48 @@
                   <div class="phead">
                     <div class="ptop">
                       <div>
-                        <div class="phi">Bonjour 👋</div>
-                        <div class="pname">Que visiter ?</div>
+                        <div class="phi">Hello 👋</div>
+                        <div class="pname">What to visit?</div>
                       </div>
                       <div class="pav">😊</div>
                     </div>
-                    <div class="pbar">🔍 &nbsp;Chercher une expérience...</div>
+                    <div class="pbar">🔍 &nbsp;Search for an experience...</div>
                   </div>
                   <div class="pbody">
-                    <div class="plbl">✨ IA recommande pour vous</div>
+                    <div class="plbl">✨ AI recommends for you</div>
                     <div class="prec">
                       <img src="https://www.mywanderlust.pl/wp-content/uploads/2023/11/visit-sidi-bou-said-tunisia-101.jpg" alt="" />
                       <div>
                         <div class="prec-name">Sidi Bou Saïd</div>
                         <div class="prec-type">🎨 Culture · 2h</div>
-                        <div class="prec-price">Dès 85 TND</div>
+                        <div class="prec-price">From 85 TND</div>
                       </div>
                     </div>
                     <div class="prec">
                       <img src="https://nabeul.gov.tn/fr/wp-content/uploads/2015/04/gargoulettes-potier.jpg" alt="" />
                       <div>
-                        <div class="prec-name">Atelier Poterie</div>
-                        <div class="prec-type">🏺 Artisanat · Nabeul</div>
-                        <div class="prec-price">Dès 30 TND</div>
+                        <div class="prec-name">Pottery Workshop</div>
+                        <div class="prec-type">🏺 Crafts · Nabeul</div>
+                        <div class="prec-price">From 30 TND</div>
                       </div>
                     </div>
                     <div class="prec">
                       <img src="https://resaprivee.com/5648-large_default/safari-et-nuit-dans-le-sahara-tunisien.jpg" alt="" />
                       <div>
-                        <div class="prec-name">Safari Sahara</div>
-                        <div class="prec-type">🏜️ Aventure · 2 jours</div>
-                        <div class="prec-price">Dès 240 TND</div>
+                        <div class="prec-name">Sahara Safari</div>
+                        <div class="prec-type">🏜️ Adventure · 2 days</div>
+                        <div class="prec-price">From 240 TND</div>
                       </div>
                     </div>
                     <div class="pai-box">
-                      <div class="pai-lbl">💬 Assistant IA</div>
-                      <div class="pai-txt">"Météo parfaite ce weekend à Sidi Bou Saïd — moins de foule le matin !"</div>
+                      <div class="pai-lbl">💬 AI Assistant</div>
+                      <div class="pai-txt">"Perfect weather this weekend in Sidi Bou Saïd — fewer crowds in the morning!"</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="p-float f1">🤖 IA Active ✓</div>
+            <div class="p-float f1">🤖 AI Active ✓</div>
             <div class="p-float f2">📍 120+ destinations</div>
           </div>
         </div>
@@ -1006,41 +929,41 @@
                 <div class="ar-center"><div class="ar-center-ico">🏛️</div></div>
                 <div class="ar-accuracy">
                   <div class="ar-pct">98%</div>
-                  <div class="ar-ptxt">Précision AR</div>
+                  <div class="ar-ptxt">AR Accuracy</div>
                 </div>
               </div>
-              <div class="ar-caption">🥽 Réalité Augmentée · Carthage 146 av. J.-C.</div>
+              <div class="ar-caption">🥽 Augmented Reality · Carthage 146 BC</div>
             </div>
-            <button class="ar-launch" onclick="openModal()">🥽 &nbsp;Lancer la Réalité Augmentée →</button>
+            <button class="ar-launch" onclick="openModal()">🥽 &nbsp;Launch Augmented Reality →</button>
           </div>
         </div>
         <div class="sr-r">
           <div class="stag">
             <div class="stag-line"></div>
-            <span class="stag-txt">Réalité Augmentée</span>
+            <span class="stag-txt">Augmented Reality</span>
           </div>
-          <h2 class="sec-h">Voyagez<br />avant de<br /><em>partir.</em></h2>
-          <p class="sec-p">Explorez hôtels, sites historiques et artisanat en immersion totale — depuis votre canapé, avant de réserver.</p>
+          <h2 class="sec-h">Travel<br />before you<br /><em>leave.</em></h2>
+          <p class="sec-p">Explore hotels, historical sites and crafts in total immersion — from your sofa, before you book.</p>
           <div class="ar-steps-list">
             <div class="ar-step">
               <div class="ar-step-n">1</div>
               <div>
-                <div class="ar-step-h">Choisissez un site</div>
-                <div class="ar-step-p">50+ destinations tunisiennes en AR 3D haute résolution</div>
+                <div class="ar-step-h">Choose a site</div>
+                <div class="ar-step-p">50+ Tunisian destinations in high-res 3D AR</div>
               </div>
             </div>
             <div class="ar-step">
               <div class="ar-step-n">2</div>
               <div>
-                <div class="ar-step-h">Immersion 360°</div>
-                <div class="ar-step-p">Naviguez librement avec audio-guide IA intégré en 3 langues</div>
+                <div class="ar-step-h">360° Immersion</div>
+                <div class="ar-step-p">Freely navigate with integrated AI audio-guide in 3 languages</div>
               </div>
             </div>
             <div class="ar-step">
               <div class="ar-step-n">3</div>
               <div>
-                <div class="ar-step-h">Réservez en confiance</div>
-                <div class="ar-step-p">Vous avez déjà vécu l'expérience — plus aucune surprise</div>
+                <div class="ar-step-h">Book with confidence</div>
+                <div class="ar-step-p">You've already lived the experience — no surprises whatsoever</div>
               </div>
             </div>
           </div>
@@ -1053,69 +976,69 @@
       <div class="art-header sr">
         <div class="stag" style="justify-content: center">
           <div class="stag-line"></div>
-          <span class="stag-txt">Marketplace Artisanat</span>
+          <span class="stag-txt">Crafts Marketplace</span>
         </div>
-        <h2 class="sec-h">L'âme de la Tunisie,<br /><em>directement à vous.</em></h2>
-        <p class="sec-p">Achetez directement auprès des artisans avec prévisualisation en Réalité Augmentée.</p>
+        <h2 class="sec-h">The soul of Tunisia,<br /><em>delivered to you.</em></h2>
+        <p class="sec-p">Buy directly from artisans with Augmented Reality preview.</p>
       </div>
       <div class="art-grid sr">
         <div class="acard">
           <div class="acard-img">
             <img src="https://ceramicaplus.tn/wp-content/uploads/2022/10/Process_potery_tunisian.jpg" alt="" />
-            <span class="acat">🏺 Poterie</span>
+            <span class="acat">🏺 Pottery</span>
           </div>
           <div class="acard-body">
-            <div class="acard-name">Atelier Nabeul</div>
+            <div class="acard-name">Nabeul Workshop</div>
             <div class="acard-loc">📍 Nabeul, Cap Bon</div>
-            <div class="acard-price">25 TND <span>/ pièce</span></div>
+            <div class="acard-price">25 TND <span>/ piece</span></div>
             <div class="acard-foot">
               <div class="acard-stars">★★★★★ 4.9</div>
-              <button class="acard-btn" onclick="openModal()">🥽 RA</button>
+              <button class="acard-btn" onclick="openModal()">🥽 AR</button>
             </div>
           </div>
         </div>
         <div class="acard">
           <div class="acard-img">
             <img src="https://pub-a0fe29ed512a454eb858af73b205c8eb.r2.dev/storage/thumbs/55/thumb1055.jpg" alt="" />
-            <span class="acat">🧵 Tissage</span>
+            <span class="acat">🧵 Weaving</span>
           </div>
           <div class="acard-body">
-            <div class="acard-name">Maison Kairouan</div>
+            <div class="acard-name">Kairouan House</div>
             <div class="acard-loc">📍 Kairouan</div>
-            <div class="acard-price">180 TND <span>/ tapis</span></div>
+            <div class="acard-price">180 TND <span>/ rug</span></div>
             <div class="acard-foot">
               <div class="acard-stars">★★★★★ 5.0</div>
-              <button class="acard-btn" onclick="openModal()">🥽 RA</button>
+              <button class="acard-btn" onclick="openModal()">🥽 AR</button>
             </div>
           </div>
         </div>
         <div class="acard">
           <div class="acard-img">
             <img src="https://www.petitfute.com/medias/mag/36296/originale/AdobeStock_541644699-1024x680.jpeg" alt="" />
-            <span class="acat">💎 Bijoux</span>
+            <span class="acat">💎 Jewellery</span>
           </div>
           <div class="acard-body">
-            <div class="acard-name">Bijouterie Hammamet</div>
+            <div class="acard-name">Hammamet Jewellers</div>
             <div class="acard-loc">📍 Hammamet</div>
-            <div class="acard-price">60 TND <span>/ bijou</span></div>
+            <div class="acard-price">60 TND <span>/ piece</span></div>
             <div class="acard-foot">
               <div class="acard-stars">★★★★☆ 4.7</div>
-              <button class="acard-btn" onclick="openModal()">🥽 RA</button>
+              <button class="acard-btn" onclick="openModal()">🥽 AR</button>
             </div>
           </div>
         </div>
         <div class="acard">
           <div class="acard-img">
             <img src="https://wildyness.com/uploads/0000/145/2023/09/06/leather-crafting-tunisia-600.png" alt="" />
-            <span class="acat">👜 Cuir</span>
+            <span class="acat">👜 Leather</span>
           </div>
           <div class="acard-body">
-            <div class="acard-name">Médina Leather</div>
-            <div class="acard-loc">📍 Médina de Tunis</div>
-            <div class="acard-price">90 TND <span>/ article</span></div>
+            <div class="acard-name">Medina Leather</div>
+            <div class="acard-loc">📍 Tunis Medina</div>
+            <div class="acard-price">90 TND <span>/ item</span></div>
             <div class="acard-foot">
               <div class="acard-stars">★★★★★ 4.8</div>
-              <button class="acard-btn" onclick="openModal()">🥽 RA</button>
+              <button class="acard-btn" onclick="openModal()">🥽 AR</button>
             </div>
           </div>
         </div>
@@ -1128,28 +1051,28 @@
       <div class="how-header sr">
         <div class="stag" style="justify-content: center">
           <div class="stag-line"></div>
-          <span class="stag-txt">Comment ça marche</span>
+          <span class="stag-txt">How it works</span>
         </div>
-        <h2 class="sec-h">Simple.<br /><em>Intelligent.</em><br />Tunisien.</h2>
+        <h2 class="sec-h">Simple.<br /><em>Intelligent.</em><br />Tunisian.</h2>
       </div>
       <div class="how-grid sr">
         <div class="hstep">
           <div class="hstep-bg-n">01</div>
           <span class="hstep-ico">👤</span>
-          <div class="hstep-title">Crée ton profil</div>
-          <div class="hstep-desc">Indique tes préférences et l'IA construit ton expérience idéale en quelques secondes.</div>
+          <div class="hstep-title">Create your profile</div>
+          <div class="hstep-desc">Share your preferences and the AI builds your ideal experience in seconds.</div>
         </div>
         <div class="hstep">
           <div class="hstep-bg-n">02</div>
           <span class="hstep-ico">🥽</span>
-          <div class="hstep-title">Explore en RA</div>
-          <div class="hstep-desc">Visite virtuellement destinations, hôtels et artisanat avant de prendre ta décision.</div>
+          <div class="hstep-title">Explore in AR</div>
+          <div class="hstep-desc">Virtually visit destinations, hotels and crafts before making your decision.</div>
         </div>
         <div class="hstep">
           <div class="hstep-bg-n">03</div>
           <span class="hstep-ico">✈️</span>
-          <div class="hstep-title">Réserve & Vis</div>
-          <div class="hstep-desc">Un clic pour tout — hébergement, transport, activités, artisanat. Et profite de la Tunisie.</div>
+          <div class="hstep-title">Book & Experience</div>
+          <div class="hstep-desc">One click for everything — accommodation, transport, activities, crafts. Then enjoy Tunisia.</div>
         </div>
       </div>
     </section>
@@ -1160,20 +1083,20 @@
         <div>
           <div class="stag">
             <div class="stag-line"></div>
-            <span class="stag-txt">Témoignages</span>
+            <span class="stag-txt">Testimonials</span>
           </div>
-          <h2 class="sec-h">Ils sont<br />tombés <em>amoureux.</em></h2>
+          <h2 class="sec-h">They fell<br /><em>in love.</em></h2>
         </div>
         <div class="rev-score-block">
           <div class="score-n">4.9</div>
           <div class="score-stars">★★★★★</div>
-          <div class="score-ct">sur 12 800 avis</div>
+          <div class="score-ct">from 12,800 reviews</div>
         </div>
       </div>
       <div class="rev-grid sr">
         <div class="rcard">
           <div class="rcard-stars">★★★★★</div>
-          <div class="rcard-text">L'IA a trouvé des endroits que je n'aurais jamais découverts seul. La RA pour Carthage était absolument bluffante.</div>
+          <div class="rcard-text">The AI found places I would never have discovered on my own. The AR experience at Carthage was absolutely mind-blowing.</div>
           <div class="rcard-user">
             <img class="rcard-av" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80" alt="" />
             <div>
@@ -1184,73 +1107,73 @@
         </div>
         <div class="rcard">
           <div class="rcard-stars">★★★★★</div>
-          <div class="rcard-text">J'ai visualisé mon tapis en RA avant de commander. Exactement comme en vrai. Une expérience incroyable !</div>
+          <div class="rcard-text">I visualised my rug in AR before ordering. Exactly like the real thing. An incredible experience!</div>
           <div class="rcard-user">
             <img class="rcard-av" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80" alt="" />
             <div>
               <div class="rcard-name">Leila Al-Rashid</div>
-              <div class="rcard-from">🇸🇦 Riyad, Arabie Saoudite</div>
+              <div class="rcard-from">🇸🇦 Riyadh, Saudi Arabia</div>
             </div>
           </div>
         </div>
         <div class="rcard">
           <div class="rcard-stars">★★★★★</div>
-          <div class="rcard-text">Tout en un seul endroit — hôtel, guide, restaurant. Réservés en 10 minutes. L'assistant IA parle parfaitement anglais.</div>
+          <div class="rcard-text">Everything in one place — hotel, guide, restaurant. All booked in 10 minutes. The AI assistant speaks perfect English.</div>
           <div class="rcard-user">
             <img class="rcard-av" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80" alt="" />
             <div>
               <div class="rcard-name">James Carter</div>
-              <div class="rcard-from">🇬🇧 Londres, Royaume-Uni</div>
+              <div class="rcard-from">🇬🇧 London, United Kingdom</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── PRESTA ─── -->
+    <!-- ─── PARTNERS ─── -->
     <section id="presta">
       <div class="presta-layout">
         <div class="sr-l">
           <div class="stag">
             <div class="stag-line"></div>
-            <span class="stag-txt">Prestataires</span>
+            <span class="stag-txt">Partners</span>
           </div>
-          <h2 class="sec-h">Vous êtes<br />prestataire ?<br /><em>Rejoignez-nous.</em></h2>
-          <p class="sec-p">Développez votre visibilité digitale et atteignez des millions de touristes locaux et étrangers.</p>
+          <h2 class="sec-h">Are you a<br />service<br /><em>provider?</em></h2>
+          <p class="sec-p">Grow your digital presence and reach millions of local and international tourists.</p>
           <div class="presta-cta">
-            <button class="btn-main">Devenir Partenaire →</button>
+            <button class="btn-main">Become a Partner →</button>
           </div>
         </div>
         <div class="presta-list sr-r">
           <div class="pcard">
             <div class="pcard-ico" style="background: rgba(15, 94, 85, 0.15)">🏨</div>
             <div class="pcard-info">
-              <div class="pcard-title">Hôtels & Hébergements</div>
-              <div class="pcard-sub">Gérez réservations & visibilité</div>
+              <div class="pcard-title">Hotels & Accommodation</div>
+              <div class="pcard-sub">Manage bookings & visibility</div>
             </div>
             <div class="pcard-count">142</div>
           </div>
           <div class="pcard">
             <div class="pcard-ico" style="background: rgba(200, 144, 58, 0.08)">🗺️</div>
             <div class="pcard-info">
-              <div class="pcard-title">Guides Touristiques</div>
-              <div class="pcard-sub">Proposez vos circuits</div>
+              <div class="pcard-title">Tour Guides</div>
+              <div class="pcard-sub">Offer your tours & circuits</div>
             </div>
             <div class="pcard-count">89</div>
           </div>
           <div class="pcard">
             <div class="pcard-ico" style="background: rgba(160, 82, 45, 0.12)">🚗</div>
             <div class="pcard-info">
-              <div class="pcard-title">Transport & Location</div>
-              <div class="pcard-sub">Voitures, bus, transferts</div>
+              <div class="pcard-title">Transport & Rentals</div>
+              <div class="pcard-sub">Cars, buses, transfers</div>
             </div>
             <div class="pcard-count">67</div>
           </div>
           <div class="pcard">
             <div class="pcard-ico" style="background: rgba(26, 70, 122, 0.12)">🍽️</div>
             <div class="pcard-info">
-              <div class="pcard-title">Restaurants & Gastronomie</div>
-              <div class="pcard-sub">Cuisine tunisienne authentique</div>
+              <div class="pcard-title">Restaurants & Gastronomy</div>
+              <div class="pcard-sub">Authentic Tunisian cuisine</div>
             </div>
             <div class="pcard-count">203</div>
           </div>
@@ -1260,13 +1183,13 @@
 
     <!-- ─── CTA ─── -->
     <section id="cta">
-      <h2 class="cta-big sr">Commencez votre<br />aventure <em>tunisienne.</em></h2>
-      <p class="cta-sub sr">Rejoignez des milliers de voyageurs qui découvrent la Tunisie autrement.</p>
+      <h2 class="cta-big sr">Begin your<br /><em>Tunisian</em> adventure.</h2>
+      <p class="cta-sub sr">Join thousands of travellers discovering Tunisia differently.</p>
       <div class="cta-form sr">
-        <input type="email" placeholder="Votre adresse email..." />
-        <button>Commencer →</button>
+        <input type="email" placeholder="Your email address..." />
+        <button>Get Started →</button>
       </div>
-      <p class="cta-note sr">✓ Gratuit &nbsp;·&nbsp; ✓ Sans carte bancaire &nbsp;·&nbsp; ✓ IA & AR incluses</p>
+      <p class="cta-note sr">✓ Free &nbsp;·&nbsp; ✓ No credit card &nbsp;·&nbsp; ✓ AI & AR included</p>
     </section>
 
     <!-- ─── FOOTER ─── -->
@@ -1274,28 +1197,28 @@
       <div class="foot-main">
         <div>
           <div class="flogo">Tunisia<b>Tour</b></div>
-          <p class="fdesc">La première plateforme numérique touristique tunisienne — IA, Réalité Augmentée, services intégrés.</p>
+          <p class="fdesc">Tunisia's first all-in-one digital tourism platform — AI, Augmented Reality, integrated services.</p>
           <div class="ftags">
-            <span class="ftag">🤖 IA Powered</span>
+            <span class="ftag">🤖 AI Powered</span>
             <span class="ftag">🥽 AR Ready</span>
             <span class="ftag">🇹🇳 100% Local</span>
           </div>
         </div>
         <div class="fcol">
-          <h4>Explorer</h4>
-          <a href="#">Destinations</a><a href="#">Artisanat</a><a href="#">Hôtels</a><a href="#">Activités</a>
+          <h4>Explore</h4>
+          <a href="#">Destinations</a><a href="#">Crafts</a><a href="#">Hotels</a><a href="#">Activities</a>
         </div>
         <div class="fcol">
-          <h4>Plateforme</h4>
-          <a href="#">Comment ça marche</a><a href="#">IA & Personnalisation</a><a href="#">Réalité Augmentée</a><a href="#">App Mobile</a>
+          <h4>Platform</h4>
+          <a href="#">How it works</a><a href="#">AI & Personalisation</a><a href="#">Augmented Reality</a><a href="#">Mobile App</a>
         </div>
         <div class="fcol">
-          <h4>Partenaires</h4>
-          <a href="#">Devenir prestataire</a><a href="#">Espace artisan</a><a href="#">Investisseurs</a><a href="#">Contact</a>
+          <h4>Partners</h4>
+          <a href="#">Become a provider</a><a href="#">Artisan space</a><a href="#">Investors</a><a href="#">Contact</a>
         </div>
       </div>
       <div class="foot-bottom">
-        <p class="foot-copy">© 2025 TunisiaTour · Équipe HyperCloud</p>
+        <p class="foot-copy">© 2025 TunisiaTour · HyperCloud Team</p>
         <div class="socials">
           <div class="soc">𝕏</div>
           <div class="soc">in</div>
@@ -1309,10 +1232,10 @@
     <div id="modal">
       <div class="mbox">
         <button class="mclose" onclick="closeModal()">✕</button>
-        <div class="m-title">Réalité Augmentée</div>
-        <div class="m-sub">Explorez Sidi bousaid en immersion totale avant de réserver.</div>
+        <div class="m-title">Augmented Reality</div>
+        <div class="m-sub">Explore Sidi Bou Saïd in full immersion before you book.</div>
         <div class="m-visual">
-          <img src="https://www.guidesulysse.com/images/destinations/iStock-498116298.jpg" alt="Carthage" />
+          <img src="https://www.guidesulysse.com/images/destinations/iStock-498116298.jpg" alt="Sidi Bou Said" />
           <div class="m-tint"></div>
           <div class="m-hud">
             <div class="m-ring"><span style="font-size: 28px">🏛️</span></div>
@@ -1323,12 +1246,12 @@
             <div class="m-scan"></div>
           </div>
         </div>
-        <div class="m-lbl">🥽 Scan en cours · Sidi Bousaid 146 av. J.-C.</div>
+        <div class="m-lbl">🥽 Scanning · Sidi Bou Saïd</div>
         <div class="m-btns">
-          <button class="m-btn-p">🏛️ Visite Guidée IA</button>
-          <button class="m-btn-s">📱 Sur Téléphone</button>
+          <button class="m-btn-p">🏛️ AI Guided Tour</button>
+          <button class="m-btn-s">📱 On Mobile</button>
         </div>
-        <p class="m-note">Prototype — Dans la version finale, la caméra s'active pour une vraie immersion.</p>
+        <p class="m-note">Prototype — In the final version, the camera activates for a true immersion experience.</p>
       </div>
     </div>
 
